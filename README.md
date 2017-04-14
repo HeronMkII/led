@@ -30,3 +30,15 @@ To upload the program to the MCU, run
 ```
 $ make upload
 ```
+
+## Finding the correct USB port
+
+To see all connected USB devices do
+
+```
+$ ls /dev/tty.usb*
+```
+
+The USB device corresponding to the programmer is almost always the device
+with the lowest id. To ease compilation, open the makefile and change the
+value of `PORT` to this device's location.
